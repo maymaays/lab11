@@ -77,25 +77,8 @@ public class Student {
 	// TODO Improve this code. Let LocalDate and DateTimeFormatter parse
 	// the string for you. Eliminate the use of Scanner!
 	private void setBirthdate(String datestr) {
-		
-		
-
-		
-//		String strDate = "2015-08-04";
-//		LocalDate aLD = LocalDate.parse(strDate);
-//		System.out.println("Date: " + aLD);
-//
-//		String strDatewithTime = "2015-08-04T10:11:30";
-//		LocalDateTime aLDT = LocalDateTime.parse(strDatewithTime);
-//		System.out.println("Date with Time: " + aLDT);
-
-		try {
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 			birthdate = LocalDate.parse(datestr, formatter);
-		} catch (DateTimeException exception) {
-			throw exception;
-		}
-
 	}
 
 	@Override
